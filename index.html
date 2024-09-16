@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>GeSTICS: A Multimodal Corpus for Studying Gesture Synthesis in Two-party Interactions with Contextualized Speech</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Project Page for GeSTICS">
+    <meta name="author" content="GeSTICS Team">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --background-color: #ecf0f1;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: var(--background-color);
+            color: var(--secondary-color);
+        }
+
+        .container {
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 30px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        h1, h2, h3, h4, h5 {
+            color: var(--primary-color);
+        }
+
+        .nav-link {
+            color: var(--secondary-color);
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        .grey-container {
+            background-color: var(--background-color);
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .feature-box {
+            border: 1px solid var(--primary-color);
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-box:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .sample-video {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .download-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .bibtex {
+            background-color: var(--background-color);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row mb-2 mt-4" id="paper-title">
+            <h1 class="col-md-12 text-center"><b>GeSTICS</b></h1>
+            <h3 class="col-md-12 text-center">
+                A Multimodal Corpus for Studying Gesture Synthesis in Two-party Interactions with Contextualized Speech
+            </h3>
+            <h3 class="col-md-12 text-center">
+                <small>IVA 2024</small>
+            </h3>
+        </div>
+
+        <div class="row" id="authors">
+            <div class="mx-auto text-center">
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item"><a href="#">Gaoussou Youssouf Kebe</a><sup>1</sup></li>
+                    <li class="list-inline-item"><a href="#">Mehmet Deniz Birlikci</a><sup>1</sup></li>
+                    <li class="list-inline-item"><a href="#">Auriane Boudin</a><sup>2</sup></li>
+                    <li class="list-inline-item"><a href="#">Ryo Ishii</a><sup>3</sup></li>
+                    <li class="list-inline-item"><a href="#">Jeffrey M. Girard</a><sup>4</sup></li>
+                    <li class="list-inline-item"><a href="#">Louis-Philippe Morency</a><sup>1</sup></li>
+                </ul>
+                <p id="institution">
+                    <sup>1</sup>Carnegie Mellon University &nbsp;&nbsp;&nbsp;&nbsp;
+                    <sup>2</sup>Aix Marseille Univ, CNRS, LPL, LIS &nbsp;&nbsp;&nbsp;&nbsp;
+                    <sup>3</sup>NTT Corporation &nbsp;&nbsp;&nbsp;&nbsp;
+                    <sup>4</sup>University of Kansas
+                </p>
+            </div>
+        </div>
+
+        <div class="row mb-4" id="links">
+            <div class="mx-auto">
+                <ul class="nav">
+                    <li class="nav-item text-center">
+                        <a href="#" class="nav-link">
+                            <svg style="width:48px;height:48px" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M16 0H8C6.9 0 6 .9 6 2V18C6 19.1 6.9 20 8 20H20C21.1 20 22 19.1 22 18V6L16 0M20 18H8V2H15V7H20V18M4 4V22H20V24H4C2.9 24 2 23.1 2 22V4H4M10 10V12H18V10H10M10 14V16H15V14H10Z" />
+                            </svg><br>
+                            Paper
+                        </a>
+                    </li>
+                    <li class="nav-item text-center">
+                        <a href="https://gestics.github.io" class="nav-link">
+                            <svg style="width:48px;height:48px" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M12,3C7.58,3 4,4.79 4,7C4,9.21 7.58,11 12,11C16.42,11 20,9.21 20,7C20,4.79 16.42,3 12,3M4,9V12C4,14.21 7.58,16 12,16C16.42,16 20,14.21 20,12V9C20,11.21 16.42,13 12,13C7.58,13 4,11.21 4,9M4,14V17C4,19.21 7.58,21 12,21C16.42,21 20,19.21 20,17V14C20,16.21 16.42,18 12,18C7.58,18 4,16.21 4,14Z" />
+                            </svg><br>
+                            Dataset
+                        </a>
+                    </li>
+                    <li class="nav-item text-center">
+                        <a href="#" class="nav-link">
+                            <svg style="width:48px;height:48px" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                            </svg><br>
+                            Code
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row mb-3 pt-2">
+            <div class="col-md-8 mx-auto">
+                <div class="row no-gutters pb-2">
+                    <div class="col-md-12">
+                        <img src="/api/placeholder/800/400" alt="GeSTICS Dataset Overview" class="img-fluid">
+                    </div>
+                </div>
+                <p class="text-justify">
+                    We present GeSTICS, a novel multimodal corpus designed to facilitate the study of gesture synthesis in two-party interactions with contextualized speech. GeSTICS comprises audiovisual recordings of post-game sports interviews, capturing both verbal and non-verbal communication aspects.
+                </p>
+            </div>
+        </div>
+
+        <div class="row mb-4" id="overview-video">
+            <div class="col-md-8 mx-auto grey-container">
+                <h4 class="pb-2"><strong>Dataset Overview</strong></h4>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-8 mx-auto">
+                <h4><strong>Features</strong></h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="feature-box">
+                            <h5>Speech Features</h5>
+                            <ul>
+                                <li>Whisper Transcriptions</li>
+                                <li>eGeMAPS Acoustic Features (88)</li>
+                                <li>LIWC (93) & VADER Lexical Features</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="feature-box">
+                            <h5>Visual Features</h5>
+                            <ul>
+                                <li>Body Pose Landmarks (33 points)</li>
+                                <li>Hand Keypoints (21 per hand)</li>
+                                <li>Face Landmarks (468) & Action Units (52)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-8 mx-auto">
+                <h4><strong>Contextual Metadata</strong></h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="feature-box">
+                            <h5>Situational Factors</h5>
+                            <ul>
+                                <li>Game Score Difference</li>
+                                <li>Game Quality Index</li>
+                                <li>Game Importance</li>
+                                <li>Team Strength Difference</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="feature-box">
+                            <h5>Individual Factors</h5>
+                            <ul>
+                                <li>Race</li>
+                                <li>Origin</li>
+                                <li>Team Role</li>
+                                <li>Age</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-8 mx-auto">
+                <h4><strong>Data Samples</strong></h4>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <video class="sample-video" controls>
+                            <source src="/api/placeholder/400/300" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>Sample 1: Post-win interview</p>
+                    </div>
+                    <div class="col-md-6">
+                        <video class="sample-video" controls>
+                            <source src="/api/placeholder/400/300" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>Sample 2: Post-loss interview</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <video class="sample-video" controls>
+                            <source src="/api/placeholder/400/300" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>Sample 3: Coach interview</p>
+                    </div>
+                    <div class="col-md-6">
+                        <video class="sample-video" controls>
+                            <source src="/api/placeholder/400/300" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p>Sample 4: Player interview</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-8 mx-auto">
+                <h4><strong>Download</strong></h4>
+                <p>The GeSTICS dataset will be available for download soon. Please check back later or contact us for more information.</p>
+                <div class="text-center">
+                    <a href="#" class="download-btn">Download (Coming Soon)</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-8 mx-auto">
+                <h4><strong>Applications</strong></h4>
+                <p class="text-justify">
+                    The GeSTICS dataset is designed to enhance the generation of realistic nonverbal behaviors in:
+                </p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="feature-box">
+                            <h5>Virtual Agents</h5>
+                            <p>Improve the naturalness of virtual agent interactions in various applications.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-box">
+                            <h5>Animated Characters</h5>
+                            <p>Enhance the realism of animated characters in games and interactive media.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="feature-box">
+                            <h5>Human-Robot Interaction</h5>
+                            <p>Develop more natural and intuitive interactions between humans and robots.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-2">
+            <div class="col-md-8 mx-auto">
+                <h4 class="mb-3">Bibtex</h4>
+                <div class="bibtex">
+@inproceedings{kebe2024gestics,
+  title={GeSTICS: A Multimodal Corpus for Studying Gesture Synthesis in Two-party Interactions with Contextualized Speech},
+  author={Kebe, Gaoussou Youssouf and Birlikci, Mehmet Deniz and Boudin, Auriane and Ishii, Ryo and Girard, Jeffrey M. and Morency, Louis-Philippe},
+  booktitle={ACM International Conference on Intelligent Virtual Agents (IVA '24)},
+  year={2024},
+  address={GLASGOW, United Kingdom},
+  month={September},
+  publisher={ACM},
+  doi={10.1145/3652988.3673917},
+  isbn={979-8-4007-0625-7/24/09}
+}
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4" id="license">
+            <div class="col-md-8 mx-auto grey-container">
+                <h4><strong>License</strong></h4>
+                <p class="text-justify">
+                    The GeSTICS dataset is released under [specify license type]. For full license details, please visit our GitHub repository or contact the authors.
+                </p>
+            </div>
+        </div>
+    </div> <!-- container -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
